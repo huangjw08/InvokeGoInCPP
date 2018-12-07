@@ -1,0 +1,6 @@
+MinGW Command Prompt中
+//.go---> .a & .h
+go build -buildmode=c-archive -o godll.a (xxx.go)  //()表示可省略
+
+//.a & .h ---> .dll
+gcc -m64 -shared -o godll.dll godll.def godll.a -static -lwinmm -lWs2_32
