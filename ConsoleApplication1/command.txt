@@ -4,3 +4,9 @@ go build -buildmode=c-archive -o godll.a (xxx.go)  //()表示可省略
 
 //.a & .h ---> .dll
 gcc -m64 -shared -o godll.dll godll.def godll.a -static -lwinmm -lWs2_32
+
+
+
+References:
+https://www.cnblogs.com/majianguo/p/7486812.html
+https://www.cnblogs.com/majianguo/p/7491508.html
