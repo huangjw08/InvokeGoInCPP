@@ -6,6 +6,8 @@ go build -buildmode=c-archive -o godll.a (xxx.go)  //()表示可省略
 gcc -m64 -shared -o godll.dll godll.def godll.a -static -lwinmm -lWs2_32
 
 
+当调用的Golang函数中传递的参数为自定义的结构体时，则需要在go build命令生成的.h头文件中进行结构体的定义
+
 
 References:
 https://www.cnblogs.com/majianguo/p/7486812.html
